@@ -296,7 +296,7 @@ shinyServer(function(input, output, session) {
     temp <- dfdist()
     temp2 <- subset(temp,outlier==TRUE)
     plot(temp$x,temp$y,
-         col = temp$cluster,
+         col = temp$cluster, las=1,
          pch = 20, cex = 3,asp = 1,xlab="",ylab="y"
            )
     if (input$Model==1) {points(centers, pch = 4, cex = 3, lwd = 2, col = temp$cluster)}
